@@ -14,8 +14,6 @@ namespace EventManager.Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime FinalDate { get; set; }
         public EventStatus Status { get; set; }
-
-        public int OrganizerId { get; set; }
         public Organizer Organizer { get; set; }
     }
 }

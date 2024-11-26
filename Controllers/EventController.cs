@@ -1,4 +1,5 @@
 ﻿using EventManager.Domain.Entities;
+using EventManager.Entities.Requests;
 using EventManager.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,7 +29,13 @@ namespace EventManager.Controllers
         {
             List<Event> entities = _services.GetAll();
 
-            return Ok(new List<Event>());
+            return Ok(entities);
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] CreateEventRequest entity)
+        {
+            return Ok();
         }
     }
 }

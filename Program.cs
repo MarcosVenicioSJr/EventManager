@@ -1,8 +1,20 @@
+using EventManager.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddScoped<EventManagerContext>();
+
 builder.Services.AddControllers();
+
+var connectionString = builder.Configuration.GetConnectionString("EventManager");
+builder.Services.AddDbContext<EventManagerContext>(options =>
+{
+    options.UseSqlServer(connectionString).LogTo(Console.WriteLine, LogLevel.Information);
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

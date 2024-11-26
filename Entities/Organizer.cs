@@ -9,6 +9,5 @@ namespace EventManager.Domain.Entities
         public string Name { get; set; }
         public string Mail { get; set; }
         public string PhoneNumber { get; set; }
-        public List<Event> Events { get; set; }
     }
 }

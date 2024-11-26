@@ -1,5 +1,6 @@
 ﻿using EventManager.Domain.Entities;
-using EventManager.Interfaces;
+using EventManager.Interfaces.Repositories;
+using EventManager.Interfaces.Services;
 
 namespace EventManager.Services
 {

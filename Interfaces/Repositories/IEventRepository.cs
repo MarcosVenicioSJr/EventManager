@@ -1,6 +1,6 @@
 ﻿using EventManager.Domain.Entities;
 
-namespace EventManager.Interfaces
+namespace EventManager.Interfaces.Repositories
 {
     public interface IEventRepository
     {

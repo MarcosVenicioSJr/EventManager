@@ -1,5 +1,6 @@
 using EventManager.Context;
-using EventManager.Interfaces;
+using EventManager.Interfaces.Repositories;
+using EventManager.Interfaces.Services;
 using EventManager.Repository;
 using EventManager.Services;
 using Microsoft.EntityFrameworkCore;

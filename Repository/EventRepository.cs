@@ -1,6 +1,6 @@
 ﻿using EventManager.Context;
 using EventManager.Domain.Entities;
-using EventManager.Interfaces;
+using EventManager.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventManager.Repository

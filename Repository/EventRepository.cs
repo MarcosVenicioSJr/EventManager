@@ -14,6 +14,11 @@ namespace EventManager.Repository
             _context = context;
         }
 
+        public async Task<List<Event>> GetAll()
+        {
+            return await _context.Events.ToListAsync();
+        }
+
         public async Task<Event> GetById(int id)
         {
             return await _context.Events.FirstOrDefaultAsync(x => x.EventId == id);

@@ -13,6 +13,11 @@ namespace EventManager.Services
             _repository = repository;
         }
 
+        public List<Event> GetAll()
+        {
+            return _repository.GetAll().Result;
+        }
+
         public Event GetById(int id)
         {
             return _repository.GetById(id).Result;

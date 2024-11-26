@@ -22,5 +22,13 @@ namespace EventManager.Controllers
 
             return Ok(entity);
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<Event> entities = _services.GetAll();
+
+            return Ok(new List<Event>());
+        }
     }
 }

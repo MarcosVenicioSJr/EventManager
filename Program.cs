@@ -1,4 +1,7 @@
 using EventManager.Context;
+using EventManager.Interfaces;
+using EventManager.Repository;
+using EventManager.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddScoped<EventManagerContext>();
+
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventServices, EventServices>();
 
 builder.Services.AddControllers();
 

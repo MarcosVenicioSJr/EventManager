@@ -2,8 +2,8 @@
 
 namespace EventManager.Interfaces.Repositories
 {
-    public interface IOrganizerRepository
+    public interface IAddressRepository
     {
-        Task<Organizer> GetByMail(string mail);
+        Task<Address> GetByZipCode(string code);
     }
 }

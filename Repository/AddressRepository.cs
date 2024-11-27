@@ -5,18 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventManager.Repository
 {
-    public class OrganizerRepository : IOrganizerRepository
+    public class AddressRepository : IAddressRepository
     {
         private readonly EventManagerContext _context;
 
-        public OrganizerRepository(EventManagerContext context)
+        public AddressRepository(EventManagerContext context)
         {
             _context = context;
         }
 
-        public async Task<Organizer> GetByMail(string mail)
+        public async Task<Address> GetByZipCode(string code)
         {
-            return await _context.Organizers.FirstOrDefaultAsync(x => x.Mail == mail);
+            return await _context.Address.FirstOrDefaultAsync(x => x.PostalCode == code);
         }
     }
 }

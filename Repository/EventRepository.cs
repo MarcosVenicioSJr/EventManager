@@ -23,5 +23,11 @@ namespace EventManager.Repository
         {
             return await _context.Events.FirstOrDefaultAsync(x => x.EventId == id);
         }
+
+        public async Task Save(Event entity)
+        {
+           await _context.Events.AddAsync(entity);
+           await _context.SaveChangesAsync();
+        }
     }
 }

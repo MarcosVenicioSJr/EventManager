@@ -18,5 +18,10 @@ namespace EventManager.Repository
         {
             return await _context.Organizers.FirstOrDefaultAsync(x => x.Mail == mail);
         }
+
+        public async void Save(Organizer organizer)
+        {
+            await _context.Organizers.AddAsync(organizer);
+        }
     }
 }

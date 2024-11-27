@@ -33,8 +33,10 @@ namespace EventManager.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] CreateEventRequest entity)
+        public IActionResult Post([FromBody] CreateEventRequest request)
         {
+            _services.Create(request);
+
             return Ok();
         }
     }

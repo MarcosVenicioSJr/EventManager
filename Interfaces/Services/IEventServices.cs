@@ -9,6 +9,6 @@ namespace EventManager.Interfaces.Services
 
         List<Event> GetAll();
 
-        void Create(CreateEventRequest request);
+        Task Create(CreateEventRequest request);
     }
 }

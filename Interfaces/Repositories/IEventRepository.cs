@@ -7,5 +7,7 @@ namespace EventManager.Interfaces.Repositories
         Task<Event> GetById(int id);
 
         Task<List<Event>> GetAll();
+
+        Task Save(Event entity);
     }
 }

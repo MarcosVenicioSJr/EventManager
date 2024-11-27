@@ -15,6 +15,9 @@ builder.Services.AddScoped<IOrganizerRepository, OrganizerRepository>();
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventServices, EventServices>();
 
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+
+
 builder.Services.AddControllers();
 
 var connectionString = builder.Configuration.GetConnectionString("EventManager");

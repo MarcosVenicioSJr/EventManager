@@ -1,4 +1,5 @@
 ﻿using EventManager.Domain.Entities;
+using EventManager.Entities.Requests;
 using EventManager.Interfaces.Repositories;
 using EventManager.Interfaces.Services;
 
@@ -11,6 +12,11 @@ namespace EventManager.Services
         public EventServices(IEventRepository repository)
         {
             _repository = repository;
+        }
+
+        public void Create(CreateEventRequest request)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Event> GetAll()

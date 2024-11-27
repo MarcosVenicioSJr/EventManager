@@ -8,8 +8,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddScoped<EventManagerContext>();
+
+builder.Services.AddScoped<IOrganizerRepository, OrganizerRepository>();
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventServices, EventServices>();

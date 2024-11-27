@@ -1,4 +1,5 @@
 ﻿using EventManager.Domain.Entities;
+using EventManager.Entities.Requests;
 
 namespace EventManager.Interfaces.Services
 {
@@ -7,5 +8,7 @@ namespace EventManager.Interfaces.Services
         Event GetById(int id);
 
         List<Event> GetAll();
+
+        void Create(CreateEventRequest request);
     }
 }
